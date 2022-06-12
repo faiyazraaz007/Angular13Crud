@@ -9,6 +9,7 @@
         <mat-label>Product Categorie</mat-label>
         <mat-select formControlName = "category" placeholder="Product categorie">
           
+          
           <mat-option *ngFor="let item of categoryData" [value]="item.categoryName">
               {{item.categoryName}}
           </mat-option>
