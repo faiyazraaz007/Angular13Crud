@@ -1,0 +1,99 @@
+{
+  "productList": [
+    {
+      "productName": "Nokia",
+      "category": "Electronics",
+      "freshness": "Brand New",
+      "price": 500,
+      "comment": "asas",
+      "date": "2022-05-17T18:00:00.000Z",
+      "id": 1
+    },
+    {
+      "productName": "Samsung",
+      "category": "Electronics",
+      "freshness": "Brand New",
+      "price": 500,
+      "comment": "SDADAS",
+      "date": "2022-05-09T18:00:00.000Z",
+      "id": 2
+    },
+    {
+      "productName": "Mango",
+      "category": "Fruits",
+      "freshness": "Brand New",
+      "price": 250,
+      "comment": "sdsd",
+      "date": "2022-05-17T18:00:00.000Z",
+      "id": 3
+    },
+    {
+      "productName": "Laravel",
+      "category": "Electronics",
+      "freshness": "Brand New",
+      "price": 10,
+      "comment": "New Products",
+      "date": "2002-12-11T18:00:00.000Z",
+      "id": 4
+    },
+    {
+      "productName": "Apple",
+      "category": "vegetables",
+      "freshness": "Brand New",
+      "price": 550,
+      "comment": "asad",
+      "date": "2022-06-12T18:00:00.000Z",
+      "id": 5
+    },
+    {
+      "productName": "apple laptop",
+      "category": "Electronics",
+      "freshness": "Brand New",
+      "price": 45454,
+      "comment": "fghbjnkm",
+      "date": "2022-06-13T18:00:00.000Z",
+      "id": 6
+    },
+    {
+      "productName": "Banana",
+      "category": "Fruits",
+      "freshness": "Brand New",
+      "price": 784,
+      "comment": "ASWEDD",
+      "date": "2022-06-05T18:00:00.000Z",
+      "id": 7
+    }
+  ],
+  "Category": [
+    {
+      "categoryCode": "01",
+      "categoryName": "Fruits",
+      "id": 1
+    },
+    {
+      "categoryCode": "02",
+      "categoryName": "Electronics",
+      "id": 2
+    },
+    {
+      "categoryCode": "03",
+      "categoryName": "vegetables",
+      "id": 4
+    },
+    {
+      "categoryCode": "04",
+      "categoryName": "Flowers",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

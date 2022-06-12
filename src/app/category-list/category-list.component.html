@@ -1,0 +1,77 @@
+<mat-sidenav-container>
+  <mat-sidenav  mode="side" opened class="met-elevation-z4">
+    <button mat-button class="menu-button ">
+      <mat-icon>home</mat-icon>
+      <span routerLink = "/home">Dashboard</span>
+    </button>
+     <mat-divider></mat-divider>
+    <button mat-button class="menu-button">
+      <a mat-button routerLink = "/productlist">
+      <mat-icon >group_work</mat-icon>
+      <span>Product List</span></a>
+    </button>
+    <button mat-button class="menu-button">
+      <a mat-button routerLink = "/categorylist">
+      <mat-icon >format_line_spacing</mat-icon>
+      <span>Category List</span></a>
+    </button>
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+  <div class="content mat-elevation-z4">
+    <div class="container">
+    <button style="margin-top: 10px;float:right;margin-right: 5px;" 
+    mat-raised-button color="warn" (click)="openDialog()">Add Category</button>
+
+<div style="margin-top:10px">
+    <mat-form-field appearance="standard">
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Search data" #input>
+    </mat-form-field>
+</div>
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+  
+      <!-- ID Column -->
+      <ng-container matColumnDef="categoryCode">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Category Name </th>
+        <td mat-cell *matCellDef="let row"> {{row.categoryCode}} </td>
+      </ng-container>
+  
+      <!-- Progress Column -->
+      <ng-container matColumnDef="categoryName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Category Name</th>
+        <td mat-cell *matCellDef="let row"> {{row.categoryName}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+        <td mat-cell *matCellDef="let row"> 
+            <button mat-icon-button (click)="editCategory(row)" color="primary">
+          <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="deleteCategory(row.id)" color="warn">
+            <mat-icon>delete</mat-icon>
+            </button>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+      <!-- Row shown when there is no matching data. -->
+      <tr  class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+      </tr>
+    </table>
+  
+  <mat-paginator [length]="100"
+    [pageSize]="5"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    aria-label="Select page">
+  </mat-paginator>
+    <!-- <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator> -->
+</div>
+<lib-ng-toast></lib-ng-toast>
+    </div>
+  </div>
